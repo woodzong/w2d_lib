@@ -1,2 +1,7 @@
 /Debug
 /.vs
+/libwmap/Debug
+/libwgl/Debug
+/libex/Debug
+/test/Debug
+/test/bin
