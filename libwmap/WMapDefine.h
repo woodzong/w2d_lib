@@ -1,0 +1,9 @@
+#ifndef _WMAPDEFINE_H_123123123
+#define _WMAPDEFINE_H_123123123
+
+#define UNIT_DEFAULT_COLOR 0x000000
+#define MAX_PATH_NUM 200
+
+
+#endif
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GSCfg>
+  <GameCfg>
+    <Test>55</Test>
+    <Bias>-1.0</Bias>
+    <ActivationResponse>1.0</ActivationResponse>
+    <MaxPerturbation>0.3</MaxPerturbation>
+
+    <PassedTimeInMSForNextGeneration>40000</PassedTimeInMSForNextGeneration> 
+
+    <LayerNum>3</LayerNum>
+    <NeuronNumPerLayer>16</NeuronNumPerLayer>
+    <InputNum>4</InputNum>
+    <OutputNum>2</OutputNum>
+
+    <SweeperNum>20</SweeperNum>
+    <MineNum>140</MineNum>
+
+    <TSPEliteNum>4</TSPEliteNum>
+    <TSPEliteCopyNum>1</TSPEliteCopyNum>
+    <TSPMutationRate>0.1</TSPMutationRate>
+    <TSPCrossOverRate>0.7</TSPCrossOverRate>
+    
+    </GameCfg>
+</GSCfg>

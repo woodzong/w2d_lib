@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{64956B7D-A1A6-42D5-9D34-3F6A1FF9D2AD}</ProjectGuid>
+    <RootNamespace>test</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\bin\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\bin\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\dx9_sdk\include;..\libwgl;..\libwmap;..\libex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\dx9_sdk\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;winmm.lib;dinput8.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\dx9_sdk\include;..\libwgl;..\libwmap;..\libex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\dx9_sdk\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;winmm.lib;dinput8.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <StackReserveSize>102400000</StackReserveSize>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CGameProc.cpp" />
+    <ClCompile Include="CGameProcFlock.cpp" />
+    <ClCompile Include="CGameProcGridMap.cpp" />
+    <ClCompile Include="CGameProcGridMapEvolution.cpp" />
+    <ClCompile Include="CGameProcLandingTSP.cpp" />
+    <ClCompile Include="CGameProcMapTSP.cpp" />
+    <ClCompile Include="CGameProcNNMineSweeper.cpp" />
+    <ClCompile Include="CGameProcUnitMove.cpp" />
+    <ClCompile Include="CNNPopulation.cpp" />
+    <ClCompile Include="CNNSweeper.cpp" />
+    <ClCompile Include="CNeuralLayer.cpp" />
+    <ClCompile Include="CNeuralNet.cpp" />
+    <ClCompile Include="CNeuron.cpp" />
+    <ClCompile Include="CNNCfg.cpp" />
+    <ClCompile Include="CNNGenome.cpp" />
+    <ClCompile Include="CNNMineMng.cpp" />
+    <ClCompile Include="CNNTSP.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="WMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libex\libex.vcxproj">
+      <Project>{c909b8a8-1c0d-45ba-8e13-f2cbf4e54227}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libwgl\libwgl.vcxproj">
+      <Project>{d57e746f-b83b-4478-a3a1-b79703c76e61}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libwmap\libwmap.vcxproj">
+      <Project>{1fcbb731-c488-4969-b92c-0176f4c0175c}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CGameProc.h" />
+    <ClInclude Include="CGameProcFlock.h" />
+    <ClInclude Include="CGameProcGridMap.h" />
+    <ClInclude Include="CGameProcGridMapEvolution.h" />
+    <ClInclude Include="CGameProcLandingTSP.h" />
+    <ClInclude Include="CGameProcMapTSP.h" />
+    <ClInclude Include="CGameProcNNMineSweeper.h" />
+    <ClInclude Include="CGameProcUnitMove.h" />
+    <ClInclude Include="CNNPopulation.h" />
+    <ClInclude Include="CNNSweeper.h" />
+    <ClInclude Include="CNeuralLayer.h" />
+    <ClInclude Include="CNeuralNet.h" />
+    <ClInclude Include="CNeuron.h" />
+    <ClInclude Include="CNNCfg.h" />
+    <ClInclude Include="CNNGenome.h" />
+    <ClInclude Include="CNNMineMng.h" />
+    <ClInclude Include="CNNTSP.h" />
+    <ClInclude Include="WMain.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="bin\mine_nn.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
