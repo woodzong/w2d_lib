@@ -50,7 +50,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\dx9_sdk\include;..\libwgl;..\libwmap;..\libex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\dx9_sdk\include;..\libwgl;..\libwmap;..\libex;..\libw3d;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -65,7 +65,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\dx9_sdk\include;..\libwgl;..\libwmap;..\libex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\dx9_sdk\include;..\libwgl;..\libwmap;..\libex;..\libw3d;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -100,6 +100,9 @@
   <ItemGroup>
     <ProjectReference Include="..\libex\libex.vcxproj">
       <Project>{c909b8a8-1c0d-45ba-8e13-f2cbf4e54227}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libw3d\libw3d.vcxproj">
+      <Project>{7d957039-6c95-4bba-9965-4223eb8f8a19}</Project>
     </ProjectReference>
     <ProjectReference Include="..\libwgl\libwgl.vcxproj">
       <Project>{d57e746f-b83b-4478-a3a1-b79703c76e61}</Project>

@@ -8,6 +8,8 @@
 #include "WMain.h"
 #include "CGameProc.h"
 
+#include "w3d_comm.h"
+
 EN_WGKEY ConvWindowsKeyToWGKey( WPARAM wParam )
 {
 	switch( wParam )
@@ -95,7 +97,7 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLin
 		return iRetCode;
 	}
 
-
+	CWOOD_LOG_DEBUG( "LibFuncTest:%d", W3D_Test() );
 	CWOOD_LOG_DEBUG( " " );
 	CWOOD_LOG_DEBUG( " ==================================== Compile Time:%s %s", __DATE__, __TIME__ );
 
