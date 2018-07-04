@@ -120,6 +120,7 @@
     <ClInclude Include="w3d_comm.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="w3d_comm.cpp" />
     <ClCompile Include="w3d_test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

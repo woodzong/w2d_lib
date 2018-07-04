@@ -23,5 +23,8 @@
     <ClCompile Include="w3d_test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="w3d_comm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
