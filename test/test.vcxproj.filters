@@ -75,6 +75,9 @@
     <ClCompile Include="CNNPopulation.cpp">
       <Filter>NNMineSweeper</Filter>
     </ClCompile>
+    <ClCompile Include="CGameProc3D.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="WMain.h">
@@ -130,6 +133,9 @@
     </ClInclude>
     <ClInclude Include="CNNPopulation.h">
       <Filter>NNMineSweeper</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameProc3D.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

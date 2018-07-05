@@ -18,3 +18,10 @@ void CWUtil::DrawLineInWorld( const CWVector2<float>& vWorldPosA, const CWVector
 }
 
 
+void CWUtil::DrawPointDebug(const CWVector2<float>& vWorldPos, DWORD dwColor, EN_WDRAW_SIZE enDrawSize)
+{
+	CWVector2<int> oScreenPos;
+	WGCAMERA->ConvWorldPosToScreenPos(vWorldPos, &oScreenPos);
+	WGDRAW->DrawPoint32BitWithSize(oScreenPos.GetX(), oScreenPos.GetY(), dwColor, enDrawSize);
+}
+

@@ -9,6 +9,7 @@
 #include "CWTimePass.h"
 #include "CWGlobalUtil.h"
 
+#include "CGameProc3D.h"
 #include "CGameProcUnitMove.h"
 #include "CGameProcFlock.h"
 #include "CGameProcGridMap.h"

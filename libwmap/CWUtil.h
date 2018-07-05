@@ -11,7 +11,8 @@
 class CWUtil
 {
 public:
-	static void DrawLineInWorld( const CWVector2<float>& vWorldPosA, const CWVector2<float>& vWorldPosB, DWORD dwColor, EN_WDRAW_SIZE enDrawSize );	
+	static void DrawLineInWorld( const CWVector2<float>& vWorldPosA, const CWVector2<float>& vWorldPosB, DWORD dwColor, EN_WDRAW_SIZE enDrawSize );
+	static void DrawPointDebug( const CWVector2<float>& vWorldPos, DWORD dwColor = WCOLOR_RED, EN_WDRAW_SIZE enDrawSize = EN_WDRAW_SIZE_1);
 };
 
 #endif

@@ -302,7 +302,8 @@ CGameProc * GetGameProc()
 	static CGameProc * g_pGameProc = NULL;
 	if( g_pGameProc == NULL )
 	{
-		g_pGameProc = new CGameProcFlock();
+		g_pGameProc = new CGameProc3D();
+		//g_pGameProc = new CGameProcFlock();
 		//g_pGameProc = new CGameProcGridMap( );
 		//g_pGameProc = new CGameProcUnitMove( );
 		//g_pGameProc = new CGameProcGridMapEvolution();

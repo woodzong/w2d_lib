@@ -78,6 +78,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CGameProc.cpp" />
+    <ClCompile Include="CGameProc3D.cpp" />
     <ClCompile Include="CGameProcFlock.cpp" />
     <ClCompile Include="CGameProcGridMap.cpp" />
     <ClCompile Include="CGameProcGridMapEvolution.cpp" />
@@ -113,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CGameProc.h" />
+    <ClInclude Include="CGameProc3D.h" />
     <ClInclude Include="CGameProcFlock.h" />
     <ClInclude Include="CGameProcGridMap.h" />
     <ClInclude Include="CGameProcGridMapEvolution.h" />
