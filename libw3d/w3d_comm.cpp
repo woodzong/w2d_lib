@@ -27,6 +27,40 @@ void W_Mat_Mul_VECTOR4D_4X4(W_VECTOR4D_PTR  va,
 
 } // end Mat_Mul_VECTOR4D_4X4
 
+
+void W_Mat_Mul_MATRIX_4X4(W_MATRIX4X4_PTR  ma, W_MATRIX4X4_PTR mb, W_MATRIX4X4_PTR  mprod)
+{
+	// this function multiplies two 4x4 matrices together and 
+	// and stores the result in mprod
+	// note later we will take advantage of the fact that we know
+	// that w=1 always, and that the last column of a 4x4 is
+	// always 0
+
+	for (int row = 0; row < 4; row++)
+	{
+		for (int col = 0; col < 4; col++)
+		{
+			// compute dot product from row of ma 
+			// and column of mb
+
+			float sum = 0; // used to hold result
+
+			for (int index = 0; index < 4; index++)
+			{
+				// add in next product pair
+				sum += (ma->M[row][index] * mb->M[index][col]);
+			} // end for index
+
+			  // insert resulting row,col element
+			mprod->M[row][col] = sum;
+
+		} // end for col
+
+	} // end for row
+
+} // end Mat_Mul_4X4
+
+
 void W_Transform_RENDERLIST4DV1(W_RENDERLIST4DV1_PTR rend_list, W_MATRIX4X4_PTR mt, int coord_select)
 {
 	switch (coord_select)

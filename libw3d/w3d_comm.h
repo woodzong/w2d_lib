@@ -375,13 +375,13 @@ inline void W_VECTOR4D_INITXYZ(W_VECTOR4D_PTR v, float x, float y, float z)
 	(v)->x = (x); (v)->y = (y); (v)->z = (z); (v)->w = 1.0;
 }
 
-
 inline void W_VECTOR4D_ZERO(W_VECTOR4D_PTR v)
 {
 	(v)->x = (v)->y = (v)->z = 0.0; (v)->w = 1.0;
 }
 
 void W_Mat_Mul_VECTOR4D_4X4(W_VECTOR4D_PTR  va, W_MATRIX4X4_PTR mb, W_VECTOR4D_PTR  vprod);
+void W_Mat_Mul_MATRIX_4X4(W_MATRIX4X4_PTR  ma, W_MATRIX4X4_PTR mb, W_MATRIX4X4_PTR  mprod);
 
 void W_Transform_RENDERLIST4DV1(W_RENDERLIST4DV1_PTR render_list, W_MATRIX4X4_PTR mt, int coord_select);
 void W_Transform_OBJECT4DV1( W_OBJECT4DV1_PTR obj, W_MATRIX4X4_PTR mt, int coord_select, int transform_basis );
@@ -391,5 +391,31 @@ void W_Model_To_World_RENDERLIST4DV1( W_RENDERLIST4DV1_PTR rend_list, W_POINT4D_
 
 void W_Init_CAM4DV1( W_CAM4DV1_PTR cam, int cam_attr, W_POINT4D_PTR cam_pos, W_VECTOR4D_PTR cam_dir, W_POINT4D_PTR cam_target, 
 	                 float near_clip_z, float far_clip_z, float fov, float viewport_width, float viewport_height );
+
+
+#define W_MAKE_ROTATE_ANG_X_MATRIX4X4( AngX ) \
+	{\
+		1,           0,          0, 0, \
+		0,  cos(-AngX), sin(-AngX), 0, \
+		0, -sin(-AngX), cos(-AngX), 0, \
+		0,           0,          0, 1 \
+	}
+
+#define W_MAKE_ROTATE_ANG_Y_MATRIX4X4( AngY ) \
+	{\
+		cos(-AngY),  0,  sin(-AngY),  0,\
+		         0,  1,           0,  0,\
+		sin(-AngY),  0,  cos(-AngY),  0,\
+		         0,  0,           0,  1\
+	}
+
+#define W_MAKE_ROTATE_ANG_Z_MATRIX4X4( AngZ ) \
+	{\
+		  cos(-AngZ), sin(-AngZ),   0,  0,\
+		 -sin(-AngZ), cos(-AngZ),   0,  0,\
+		           0,          0,   1,  0,\
+		           0,          0,   0,  1\
+	}
+
 
 #endif
